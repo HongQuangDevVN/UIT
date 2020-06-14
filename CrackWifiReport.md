@@ -20,6 +20,7 @@ Show something about statics, general information about each channel:
 ![4.png](https://www.upsieutoc.com/images/2020/06/14/4.png)
 
 Statistics about packet types and data rates:
+
 ![523b7af6be0a09be4.png](https://www.upsieutoc.com/images/2020/06/14/523b7af6be0a09be4.png)
 #### **c) Latest IP Connections (IP Statistics)**
 Trang này dùng để hiển thịthông tin chi tiết về những kết nối mạng của máy tính của bạn.
@@ -32,6 +33,7 @@ Trang này dùng để hiển thịthông tin chi tiết về những kết nố
 * Hostname – Hiện thịtên của máy tính từ xa (remote computer). Nếu tên máy tính không thể phân giải
 được, thì cột này bỏ trống.
 * Bytes – hiển thị số các bytes đã được truyền trong phiên làm việc này.
+
 ![6.png](https://www.upsieutoc.com/images/2020/06/14/6.png)
 #### **d) Packet**
 Trang này được sử dụng để liệt kê tất cả các gói tin mạng đã được bắt và hiển thị thông tin chi tiết về các gói tin.
@@ -47,13 +49,13 @@ vụ hay theo giá trị số.
 giữa 2 gói tin cuối cùng của thời gian tuyệt đối.
 #### **e) Rules**
 Trang này cho phép bạn tạo ra các rule để bắt các gói tin. Ví dụ bạn có thể tạo ra rule để bắt những gói tin đi vào mạng của bạn. Có một vài rule mà bạn cần biết.
-![8.png](https://www.upsieutoc.com/images/2020/06/14/8.png)
-* Protocols & Direction:Cho phép bạn bỏ qua hay bắt những gói tin dựa trên giao thức của tầng 2 và tầng
-3, hướng đi của gói tin.
+* Protocols & Direction:Cho phép bạn bỏ qua hay bắt những gói tin dựa trên giao thức của tầng 2 và tầng 3, hướng đi của gói tin.
 * MAC addresses Cho phép bạn bỏ qua hay bắt gói tin dựa trên địa chỉ MAC.
 * Ports Cho phép bạn bỏ qua hay bắt gói tin dựa trên port của gói tin đó.
 * TCP Flags Cho phép bạn bỏ qua hay bắt gói tin dựa trên TCP flags.
 * Text Cho phép bạn bắt gói tin dựa trên nội dung.
+  
+![8.png](https://www.upsieutoc.com/images/2020/06/14/8.png)
 ### **3. Thanh công cụ / hỗ trợ**
 Ngoài các tính năng kể trên, CommView còn hỗ trợ các tùy chọn khác như IP Alisases, MAC alisases, Package Generator, Reconstruct TCP session
 ![9.png](https://www.upsieutoc.com/images/2020/06/14/9.png)
@@ -71,12 +73,15 @@ General information about all nearby devices use Wi-Fi:
 ![11.png](https://www.upsieutoc.com/images/2020/06/14/11.png)
 
 Device Details –Device Info:
+
 ![12.png](https://www.upsieutoc.com/images/2020/06/14/12.png)
 
 Statistics about Wi-Fi:
+
 ![13.png](https://www.upsieutoc.com/images/2020/06/14/13.png)
 
 Packet Graphs:
+
 ![14.png](https://www.upsieutoc.com/images/2020/06/14/14.png)
 
 ## **III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK**
@@ -106,12 +111,6 @@ Packet Graphs:
 * aircrack-ng -w password.lst -b <MAC_AP> psk*.cap
 ### **5. Reference**
 Demo is available on Youtube:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lyvsETiD1WM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-![14.png](https://youtu.be/lyvsETiD1WM)
-
-[![](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://youtu.be/lyvsETiD1WM)
-
+[![](https://www.upsieutoc.com/images/2020/06/14/image11e433a1ce5fac76.png)](https://youtu.be/lyvsETiD1WM)
 
 -----------------------------------------------------------------
