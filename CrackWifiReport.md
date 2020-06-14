@@ -85,18 +85,43 @@ Packet Graphs:
 ![14.png](https://www.upsieutoc.com/images/2020/06/14/14.png)
 
 ## **III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK**
-### **1. Methodology**: Dictionary attack.
+### **1. Introduction**
+WPA/WPA2 supports many types of authentication beyond pre-shared keys. aircrack-ng can ONLY crack pre-shared keys. So make sure airodump-ng shows the network as having the authentication type of PSK, otherwise, don't bother trying to crack it.
 
-### **2. Used software**:
+The only time you can crack the pre-shared key is if it is a dictionary word or relatively short in length. Conversely, if you want to have an unbreakable wireless network at home, use WPA/WPA2 and a 63 character password composed of random characters including special symbols.
+
+The impact of having to use a brute force approach is substantial. Because it is very compute intensive, a computer can only test 50 to 300 possible keys per second depending on the computer CPU. It can take hours, if not days, to crunch through a large dictionary.
+
+### **2. Assumptions**
+First, this solution assumes:
+
+You are using drivers patched for injection. Use the injection test to confirm your card can inject.
+
+You are physically close enough to send and receive access point and wireless client packets. Remember that just because you can receive packets from them does not mean you may will be able to transmit packets to them. The wireless card strength is typically less then the AP strength. So you have to be physically close enough for your transmitted packets to reach and be received by both the AP and the wireless client. You can confirm that you can communicate with the specific AP by following these instructions.
+
+You are using v0.9.1 or above of aircrack-ng. If you use a different version then some of the command options may have to be changed.
+Ensure all of the above assumptions are true, otherwise the advice that follows will not work. In the examples below, you will need to change “ath0” to the interface name which is specific to your wireless card.
+
+### **3. Solution**
+The objective is to capture the WPA/WPA2 authentication handshake and then use aircrack-ng to crack the pre-shared key.
+
+This can be done either actively or passively. “Actively” means you will accelerate the process by deauthenticating an existing wireless client. “Passively” means you simply wait for a wireless client to authenticate to the WPA/WPA2 network. The advantage of passive is that you don't actually need injection capability and thus the Windows version of aircrack-ng can be used.
+
+Here are the basic steps we will be going through:
+* Start the wireless interface in monitor mode on the specific AP channel
+* Start airodump-ng on AP channel with filter for bssid to collect authentication handshake
+Use aireplay-ng to deauthenticate the wireless client
+* Run aircrack-ng to crack the pre-shared key using the authentication handshake
+### **4. Used software**
 * Aireplay-ng – Most popular Perl-based WEP encryption cracking tool
 * Airodump – GrabbingIVs
 
-### **3. Requirement**:
+### **5. Requirement**
 * OS: Obviously Kali Linux (at least 2016.2) installed and working.
 * A wireless adapter capable of injection/monitor mode. Some computers have network cards capable of this from the factory. If it isn't available you'll have to buy an external one.
 * A wordlist to attempt to "crack" the password once it has been captured.
 
-### **4. Details of steps**:
+### **6. Details of steps:**
 #### **Step 1 - Start the wireless interface in monitor mode**
 ```
 airmon-ng
@@ -117,7 +142,7 @@ aireplay-ng -0 1 -a <MAC_AP> -c <Client_AP> ath0`
 ```
 aircrack-ng -w password.lst -b <MAC_AP> psk*.cap
 ```
-### **5. Reference**
+### **7. Reference**
 Demo is available on Youtube:
 
 [![](https://www.upsieutoc.com/images/2020/06/14/image11e433a1ce5fac76.png)](https://youtu.be/lyvsETiD1WM)
