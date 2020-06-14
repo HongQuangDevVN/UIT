@@ -30,7 +30,7 @@ Trang này dùng để hiển thị thông tin chi tiết về những kết n�
 * Direction –Hiển thị hướng đi của gói tin đó.
 * Sessions – hiển thị số các phiên (sessions) kết nối TCP/IP thành công.
 * Ports – Liệt kê tất cả các port của remote computer dùng các kết nối sử dụng giao thức TCP/IP.
-* Hostname – Hiện thịtên của máy tính từ xa (remote computer). Nếu tên máy tính không thể phân giải
+* Hostname – Hiện thị tên của máy tính từ xa (remote computer). Nếu tên máy tính không thể phân giải
 được, thì cột này bỏ trống.
 * Bytes – hiển thị số các bytes đã được truyền trong phiên làm việc này.
 
