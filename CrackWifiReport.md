@@ -81,6 +81,7 @@ Statistics about Wi-Fi:
 ![13.png](https://www.upsieutoc.com/images/2020/06/14/13.png)
 
 Packet Graphs:
+
 ![14.png](https://www.upsieutoc.com/images/2020/06/14/14.png)
 
 ## **III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK**
