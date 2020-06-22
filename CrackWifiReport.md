@@ -152,9 +152,13 @@ Trong báo cáo này, nhóm chúng em sẽ thực hiện demo một cuộc tấn
 
 ### **1. Cấu hình phần cứng/mềm**
 **OS:** Kali Linux 2020.2
+
 **Kernel version:** SMP Debian 5.6.14-1kali1 (2020-05-25)
+
 **RAM:** 8Gb
+
 **CPU:** Intel® Core™ i7-9750H Processor
+
 **Wireless Card:** TL-WN722N  V3.
 ### **2. Tool sử dụng**
 ```
@@ -162,8 +166,11 @@ airodump-ng, aireplay-ng, aircrack-ng, besside-ng
 ```
 ### **3. Quy trình tấn công**
 **Step 1:** Thiết lập môi trường.
+
 **Step 2:** Scan mạng để xác định các thông số của mục tiêu.
+
 **Step 3:** Theo dõi, bắt các gói tin tới mục tiêu. Gửi các gói tin fake tới mục tiêu để đẩy nhanh quá trình thu nhập data.
+
 **Step 4:** Khi đã thu nhập "đủ" data, dừng theo dõi mục tiêu và bắt đầu crack pass từ những data đã thu nhập.
 
 **Lưu ý:** quy trình trên áp dụng cho tấn công mạng WEP-OpenKey, đối với WEP-ShareKey, chúng ta có thể thực hiện dễ dàng hơn theo quy trình được đề cập cuối report.
@@ -266,4 +273,5 @@ aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -
 **Khi thành công chúng ta sẽ có thể truy cập Access Point như bình thường.**
 
 [![FakeSKA.png](https://www.upsieutoc.com/images/2020/06/17/FakeSKA.png)](https://www.upsieutoc.com/image/frF6QO)
+
 ---
