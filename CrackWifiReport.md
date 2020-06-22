@@ -220,6 +220,7 @@ Phương pháp khác, cũ hơn là phương pháp FMS / KoreK. Phương pháp FM
 >**aircrack-ng wepcracking-01.cap**
 
 Đối với bản demo trong report này, ta cần truyền vào file chứa các packet mà ta đã dump được từ Airodump-ng. và tận hưởng thành quả.
+
 [![Crack.png](https://www.upsieutoc.com/images/2020/06/17/Crack.png)](https://www.upsieutoc.com/image/frezeN)
 
 ### **8. Đối với các mạng mã hóa WEP - ShareKey**
@@ -243,5 +244,6 @@ Quy trình crack:
 >**aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -a <target's bssid> -h < Mac fake > wlan0**
 
 Khi thành công chúng ta sẽ có thể truy cập Access Point như bình thường.
+
 [![FakeSKA.png](https://www.upsieutoc.com/images/2020/06/17/FakeSKA.png)](https://www.upsieutoc.com/image/frF6QO)
 ---
