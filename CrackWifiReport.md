@@ -226,15 +226,15 @@ Phương pháp khác, cũ hơn là phương pháp FMS / KoreK. Phương pháp FM
 ### **8. Đối với các mạng mã hóa WEP - ShareKey**
 Đối với **Shared Key Authentication (SKA)**, Client yêu cầu xác thực từ access point(AP), AP sẽ phản hồi lại một challenge. Client phải mã hoá challenge bằng shared key và gửi trở lại. AP sẽ giải mã và kiểm tra challenge ban đầu. Nếu thành công hay thất bại AP đều gửi thông báo trở về client.
 
- Vấn đề bảo mật ở đây, kẻ tấn công có thể nghe lén việc trao đổi giữa client và AP: plain text challenge và challenge đã mã hoá Kẻ tấn công có thể XOR hai nội dung trên để lấy keystream. Keystream này có thể được sử dụng để mã hoá challenge được gửi từ AP. 
+Vấn đề bảo mật ở đây, kẻ tấn công có thể nghe lén việc trao đổi giữa client và AP: plain text challenge và challenge đã mã hoá Kẻ tấn công có thể XOR hai nội dung trên để lấy keystream. Keystream này có thể được sử dụng để mã hoá challenge được gửi từ AP. 
 
-Quy trình crack:
-* Đầu tiên ta cũng phải setup môi trường và scan mạng để chuẩn bị tấn công.
-* Sau đó bắt đầu theo dõi để bắt được các gói tin challenge.
+**Quy trình crack:**
+Đầu tiên ta cũng phải setup môi trường và scan mạng để chuẩn bị tấn công.
+Sau đó bắt đầu theo dõi để bắt được các gói tin challenge.
  >**airodump-ng wlan0 -c < target's chanel > --bssid <target's bssid> -w keystream**
 
 [![KeyStreamCreate.md.png](https://www.upsieutoc.com/images/2020/06/17/KeyStreamCreate.md.png)](https://www.upsieutoc.com/image/frF70s)
-* Send gói tin deauthen để bắt các user phải đăng nhập lại để ta có thể bắt được các gói tin challenge. Sau khi người dùng đăng nhập lại, airodump-ng sẽ bắt được gói tin SKA.
+Send gói tin deauthen để bắt các user phải đăng nhập lại để ta có thể bắt được các gói tin challenge. Sau khi người dùng đăng nhập lại, airodump-ng sẽ bắt được gói tin SKA.
  >**aireplay-ng --deauth 0 -a <target's bssid> -c  < true user MAC >  wlan0**
 
 [![Deauthen.png](https://www.upsieutoc.com/images/2020/06/17/Deauthen.png)](https://www.upsieutoc.com/image/frFmc1)
@@ -243,7 +243,6 @@ Quy trình crack:
 * Bắt đầu gửi gói tin challenge fake.
 >**aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -a <target's bssid> -h < Mac fake > wlan0**
 
-Khi thành công chúng ta sẽ có thể truy cập Access Point như bình thường.
-
+**Khi thành công chúng ta sẽ có thể truy cập Access Point như bình thường.**
 [![FakeSKA.png](https://www.upsieutoc.com/images/2020/06/17/FakeSKA.png)](https://www.upsieutoc.com/image/frF6QO)
 ---
