@@ -210,6 +210,7 @@ airodump-ng --bssid E8:94:F6:3C:2D:D8 --channel 6 --write wepcracking wlan0
 ```
 
 Tiếp tục, **airodump-ng** sẽ tập trung theo dõi mạng có  bssid = E8:94:F6:3C:2D:D8 (bssid của mục tiêu). Option **" --write < prefix >"** sẽ dump các packet vào file có **< prefix >**.
+
 [![Airodump_capDATA.png](https://www.upsieutoc.com/images/2020/06/16/Airodump_capDATA.png)](https://www.upsieutoc.com/image/fdT180)
 
 Hãy chú ý tới trường **"#Data"**, đây chính là số lượng các gói tin mà chúng ta đã bắt được. Càng nhiều **Data** thì khả năng crack pass càng lớn. Đối với WEP 40bits, nhóm đề xuất bắt tối thiểu 40.000 **#Data**. 
