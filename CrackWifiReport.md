@@ -1,6 +1,7 @@
-# **WIFI REPORT - Wireless network and Mobile Security**
+# **WIFI REPORT - Wireless network and Mobile Security - NT330.K21.ANTN**
 
-<div style="text-align: right"> NT330.K21.ANTN </div>
+**Lecturer: PhD. Lê Kim Hùng**
+
 
 ## **I. COMMVIEW**
 ### **1. General about Commview**
