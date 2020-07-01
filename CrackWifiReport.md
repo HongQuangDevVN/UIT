@@ -58,7 +58,7 @@ Trang này cho phép bạn tạo ra các rule để bắt các gói tin. Ví d�
 * Ports Cho phép bạn bỏ qua hay bắt gói tin dựa trên port của gói tin đó.
 * TCP Flags Cho phép bạn bỏ qua hay bắt gói tin dựa trên TCP flags.
 * Text Cho phép bạn bắt gói tin dựa trên nội dung.
-  
+
 ![8.png](https://www.upsieutoc.com/images/2020/06/14/8.png)
 ### **3. Thanh công cụ / hỗ trợ**
 Ngoài các tính năng kể trên, CommView còn hỗ trợ các tùy chọn khác như IP Alisases, MAC alisases, Package Generator, Reconstruct TCP session
