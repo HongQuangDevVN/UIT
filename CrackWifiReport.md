@@ -56,11 +56,15 @@ Sử dụng AP có hỗ trợ thiết lập sử dụng phương thức bảo m�
 Phân loại theo hệ điều hành sử dụng:
 ### **1. Kali Linux OS**
 **Aireplay-ng** - Công cụ bẻ khóa mã hóa WEP dựa trên Perl phổ biến nhất
+
 **Aircrack-ng** - ARP giả mạo / tiêm bằng cách sử dụng aireplay-ng
+
 **Kismet** - Network Sniffer, cũng có thể lấy IV
+
 **Airodump** - GrabbingIVs
 ### **2. Windows OS**
 **Commview** - Bắt các gói trong Windows
+
 **Aircrack-ng GUI** - Cung cấp giao diện người dùng trên Windows
 # **C. TRIỂN KHAI TẤN CÔNG**
 ## **I. COMMVIEW**
