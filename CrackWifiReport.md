@@ -14,13 +14,9 @@ Năm 2003, Wi-Fi Alliance tuyên bố rằng WEP đã được thay thế bởi 
 
 WEP là giao thức mã hóa duy nhất có sẵn cho các thiết bị 802.11a và 802.11b được xây dựng trước tiêu chuẩn WPA, có sẵn cho các thiết bị 802.11g. Tuy nhiên, một số thiết bị 802.11b sau đó đã được cung cấp bản cập nhật phần mềm hoặc phần mềm để bật WPA và các thiết bị mới hơn đã tích hợp sẵn.
 ## **II. ENCRYPTION DETAILS**
-Mỗi gói tin gửi đi sẽ được mã hóa bằng một key stream riêng biệt. Key stream này được tạo ra bằng cách kết hợp một IV (Initialization vector) 24 bit với password (dùng để đăng nhập vào wifi) 40 bit.
+Standard 64-bit WEP uses a 40 or 104 bits key (also known as WEP-40), which is concatenated with a 24-bit initialization vector (IV) to form the RC4 key.
 
 ![Untitled8b76c2ae6bfbc72e.png](https://www.upsieutoc.com/images/2020/07/05/Untitled8b76c2ae6bfbc72e.png)
-
-Khi gói tin được mã hóa xong thì trước khi gửi đi, gói tin ấy sẽ được đính kèm IV ở dạng plaintext vào và cuối cùng là gửi đi đến AP (Access point). Khi đó AP khi nhận được gói tin có kèm IV, nó sẽ dùng IV kết hợp với password và tạo ra key stream đồng thời giải mã gói tin ấy ra. Điều này cũng tương tự ở phía client.
-
-Vấn đề ở đây là khi lượng traffic trong wireless tăng lên rất nhiều, tức là số lượng gói tin sẽ tăng lên nhiều dẫn tới việc sử dụng hết các IV. Hay nói cách khác sẽ có rất nhiều gói tin sử dụng chung một IV dẫn tới việc key stream trùng nhau.
 ## **III. AUTHENTICATION**
 Two methods of authentication can be used with WEP: Open System authentication and Shared Key authentication.
 
