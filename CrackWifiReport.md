@@ -15,22 +15,31 @@ Năm 2003, Wi-Fi Alliance tuyên bố rằng WEP đã được thay thế bởi 
 WEP là giao thức mã hóa duy nhất có sẵn cho các thiết bị 802.11a và 802.11b được xây dựng trước tiêu chuẩn WPA, có sẵn cho các thiết bị 802.11g. Tuy nhiên, một số thiết bị 802.11b sau đó đã được cung cấp bản cập nhật phần mềm hoặc phần mềm để bật WPA và các thiết bị mới hơn đã tích hợp sẵn.
 ## **II. ENCRYPTION DETAILS**
 Mỗi gói tin gửi đi sẽ được mã hóa bằng một key stream riêng biệt.
+
 Key stream này được tạo ra bằng cách kết hợp một IV (Initialization vector) 24 bit với password (dùng để đăng nhập vào wifi) 40 bit.
+
 Khi gói tin được mã hóa xong thì trước khi gửi đi, gói tin ấy sẽ được đính kèm IV ở dạng plaintext vào và cuối cùng là gửi đi đến AP.
+
 AP (Access point) khi nhận được gói tin có kèm IV, nó sẽ dùng IV kết hợp với password và tạo ra key stream đồng thời giải mã gói tin ấy ra. Điều này cũng tương tự ở phía client.
+
 Vấn đề ở đây là khi lượng traffic trong wireless tăng lên rất nhiều, tức là số lượng gói tin sẽ tăng lên nhiều dẫn tới việc sử dụng hết các IV. Hay nói cách khác sẽ có rất nhiều gói tin sử dụng chung một IV dẫn tới việc key stream trùng nhau.
 ## **III. AUTHENTICATION**
 Two methods of authentication can be used with WEP: Open System authentication and Shared Key authentication.
+
 In Open System authentication, the WLAN client does not provide its credentials to the Access Point during authentication. Any client can authenticate with the Access Point and then attempt to associate. In effect, no authentication occurs. Subsequently, WEP keys can be used for encrypting data frames. At this point, the client must have the correct keys.
+
 In Shared Key authentication, the WEP key is used for authentication in a four-step challenge-response handshake:
 1. The client sends an authentication request to the Access Point.
 2. The Access Point replies with a clear-text challenge.
 3. The client encrypts the challenge-text using the configured WEP key and sends it back in another authentication request.
 4. The Access Point decrypts the response. If this matches the challenge text, the Access Point sends back a positive reply.
+
 After the authentication and association, the pre-shared WEP key is also used for encrypting the data frames using RC4.
 ## **IV. THE WEAKNESS OF WEP**
 Because RC4 is a stream cipher, the same traffic key must never be used twice. The purpose of an IV, which is transmitted as plain text, is to prevent any repetition, but a 24-bit IV is not long enough to ensure this on a busy network. The way the IV was used also opened WEP to a related key attack. For a 24-bit IV, there is a 50% probability the same IV will repeat after 5,000 packets.
+
 In August 2001, Scott Fluhrer, Itsik Mantin, and Adi Shamir published a cryptanalysis of WEP that exploits the way the RC4 ciphers and IV are used in WEP, resulting in a -passive attack that can recover the RC4 key after eavesdropping on the network. Depending on the amount of network traffic, and thus the number of packets available for inspection, a successful key recovery could take as little as one minute. 
+
 If an insufficient number of packets are being sent, there are ways for an attacker to send packets on the network and thereby stimulate reply packets which can then be inspected to find the key. The attack was soon implemented, and automated tools have since been released. It is possible to perform the attack with a personal computer, off-the-shelf hardware and freely available software such as aircrack-ng to crack any WEP key in minutes.
 # **B. TRIỂN KHAI TẤN CÔNG**
 ## **I. COMMVIEW**
