@@ -10,11 +10,12 @@
 ## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
 Wired Equivalent Privacy (WEP) là một thuật toán bảo mật cho các mạng không dây IEEE 802.11. Được giới thiệu như một phần của tiêu chuẩn 802.11 ban đầu được phê chuẩn vào năm 1997, mục đích của nó là cung cấp bảo mật dữ liệu tương đương với mạng có dây truyền thống. WEP, có thể recognizable bằng khóa 10 hoặc 26 chữ số thập lục phân (40 hoặc 104 bit).
 
-Năm 2003, Wi-Fi Alliance tuyên bố rằng WEP đã được thay thế bởi Wi-Fi Protected Access (WPA). Vào năm 2004, với việc phê chuẩn tiêu chuẩn 802.11i đầy đủ (tức là WPA2), IEEE đã tuyên bố rằng cả WEP-40 và WEP-104 đều không được chấp nhận. WEP là giao thức mã hóa duy nhất có sẵn cho các thiết bị 802.11a và 802.11b được xây dựng trước tiêu chuẩn WPA, có sẵn cho các thiết bị 802.11g. Tuy nhiên, một số thiết bị 802.11b sau đó đã được cung cấp bản cập nhật phần mềm hoặc phần mềm để bật WPA và các thiết bị mới hơn đã tích hợp sẵn.
+Năm 2003, Wi-Fi Alliance tuyên bố rằng WEP đã được thay thế bởi Wi-Fi Protected Access (WPA). Vào năm 2004, với việc phê chuẩn tiêu chuẩn 802.11i đầy đủ (tức là WPA2), IEEE đã tuyên bố rằng cả WEP-40 và WEP-104 đều không được chấp nhận. 
+WEP là giao thức mã hóa duy nhất có sẵn cho các thiết bị 802.11a và 802.11b được xây dựng trước tiêu chuẩn WPA, có sẵn cho các thiết bị 802.11g. Tuy nhiên, một số thiết bị 802.11b sau đó đã được cung cấp bản cập nhật phần mềm hoặc phần mềm để bật WPA và các thiết bị mới hơn đã tích hợp sẵn.
 ## **II. ENCRYPTION DETAILS**
 Mỗi gói tin gửi đi sẽ được mã hóa bằng một key stream riêng biệt. Key stream này được tạo ra bằng cách kết hợp một IV (Initialization vector) 24 bit với password (dùng để đăng nhập vào wifi) 40 bit.
 
-[![1280px-Wep-crypt-alt.svg.md.png](https://www.upsieutoc.com/images/2020/07/05/1280px-Wep-crypt-alt.svg.md.png)](https://www.upsieutoc.com/image/lNxutt)
+![Untitled8b76c2ae6bfbc72e.png](https://www.upsieutoc.com/images/2020/07/05/Untitled8b76c2ae6bfbc72e.png)
 
 Khi gói tin được mã hóa xong thì trước khi gửi đi, gói tin ấy sẽ được đính kèm IV ở dạng plaintext vào và cuối cùng là gửi đi đến AP (Access point). Khi đó AP khi nhận được gói tin có kèm IV, nó sẽ dùng IV kết hợp với password và tạo ra key stream đồng thời giải mã gói tin ấy ra. Điều này cũng tương tự ở phía client.
 
