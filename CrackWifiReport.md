@@ -35,7 +35,36 @@ Because RC4 is a stream cipher, the same traffic key must never be used twice. T
 In August 2001, Scott Fluhrer, Itsik Mantin, and Adi Shamir published a cryptanalysis of WEP that exploits the way the RC4 ciphers and IV are used in WEP, resulting in a -passive attack that can recover the RC4 key after eavesdropping on the network. Depending on the amount of network traffic, and thus the number of packets available for inspection, a successful key recovery could take as little as one minute. 
 
 If an insufficient number of packets are being sent, there are ways for an attacker to send packets on the network and thereby stimulate reply packets which can then be inspected to find the key. The attack was soon implemented, and automated tools have since been released. It is possible to perform the attack with a personal computer, off-the-shelf hardware and freely available software such as aircrack-ng to crack any WEP key in minutes.
-# **B. TRIỂN KHAI TẤN CÔNG**
+# **B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG**
+## **I. HỆ ĐIỀU HÀNH**
+### **1. Kali linux**
+Thực hiện cài đặt máy ảo trên VMWare. Cấu hình:
+
+Memory 2 GB
+Processor 2 cores
+Hard Disk 20 GB SSD
+Card mạng rời TL-WN722N
+### **2. Windows**
+Sử dụng máy thật. Chi tiết về cấu hình:
+
+Memory 8 GB
+Processor Intel® Core™ i5-7200U
+Hard Disk 128 GB SSD
+## **II. ACCESS POINT**
+Sử dụng AP có hỗ trợ thiết lập sử dụng phương thức bảo mật WEP ở cả 2 mode: OPEN và Shared Key.
+## **III. CÁC CÔNG CỤ ĐƯỢC SỬ DỤNG**
+### **1. Aireplay-ng** - Công cụ bẻ khóa mã hóa WEP dựa trên Perl phổ biến nhất
+### **2. Aircrack-ng** - ARP giả mạo / tiêm bằng cách sử dụng aireplay-ng
+### **3. Kismet** - Network Sniffer, cũng có thể lấy IV
+### **4. Airodump** - GrabbingIVs
+### **5. Commview** - Bắt các gói trong Windows
+### **6. Aircrack-ng GUI** - Cung cấp giao diện người dùng trên Windows
+
+Phân loại theo hệ điều hành sử dụng:
+Kali Linux: Aireplay-ng, Aircrack-ng, Airodump, Kismet.
+Window 10: Commview, Aircrack-ng GUI.
+
+# **C. TRIỂN KHAI TẤN CÔNG**
 ## **I. COMMVIEW**
 ### **1. General about Commview**
 Commview là một chương trình dùng để bắt (capturing) và phân tích (analyzing) các gói tin cho mạng Internet hoặc mạng LAN.
