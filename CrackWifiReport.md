@@ -7,7 +7,7 @@
 | Nguyễn Xuân Hà | 18520042 |
 
 # A. CƠ SỞ LÝ THUYẾT
-## **I. WEP OVERVIEW**
+## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
 Wired Equivalent Privacy (WEP) là một thuật toán bảo mật cho các mạng không dây IEEE 802.11. Được giới thiệu như một phần của tiêu chuẩn 802.11 ban đầu được phê chuẩn vào năm 1997, mục đích của nó là cung cấp bảo mật dữ liệu tương đương với mạng có dây truyền thống. [1] WEP, có thể recognizable bằng khóa 10 hoặc 26 chữ số thập lục phân (40 hoặc 104 bit).
 
 Năm 2003, Wi-Fi Alliance tuyên bố rằng WEP đã được thay thế bởi Wi-Fi Protected Access (WPA). Vào năm 2004, với việc phê chuẩn tiêu chuẩn 802.11i đầy đủ (tức là WPA2), IEEE đã tuyên bố rằng cả WEP-40 và WEP-104 đều không được chấp nhận. 
