@@ -66,13 +66,15 @@ Phân loại theo hệ điều hành sử dụng:
 **Commview** - Bắt các gói trong Windows
 
 **Aircrack-ng GUI** - Cung cấp giao diện người dùng trên Windows
-# **C. KỊCH BẢN TẤN CÔNG**
+# **C. XÂY DỰNG KỊCH BẢN**
 Cracking wep sẽ đi theo 2 hướng dựa vào việc thực hiện tấn công trên Windows hay Linux.
 ## **I. KỊCH BẢN 1 - SỬ DỤNG MÁY WINDOWS**
 **Bước 1:** Sử dụng Commview
 
 **Bước 2:** Tăng tốc quá trình bắt gói tin
-Trong thực tế nếu để quá trình bắt gói tin như bình thường và client kết nối vào cũng không tích cực hoạt động thì phải mất vài giờ bắt gói tin để có thể đủ gói tin cho việc crack thành công mật khẩu wep. Như vậy Quá trình bắt gói tin có thể kéo dài, vì vậy ta cần đẩy nhanh quá trình này lên bằng aireplay-ng: 
+Trong thực tế nếu để quá trình bắt gói tin như bình thường và client kết nối vào cũng không tích cực hoạt động thì phải mất vài giờ bắt gói tin để có thể đủ gói tin cho việc crack thành công mật khẩu wep.
+
+Như vậy Quá trình bắt gói tin có thể kéo dài, vì vậy ta cần đẩy nhanh quá trình này lên bằng aireplay-ng: 
 
 - Mạo danh client bằng fake authen 
 - Thực hiện deauthen các client đang kết nối tới AP để các client đó kết nối lại.
@@ -81,7 +83,7 @@ Sau đó gửi arp request làm tăng traffic trong mạng.
 
 **Bước 3:** Crack wep bằng Aircrack-ng GUI
 Điều kiện cần khi crack wep bằng aircrack-ng là cần phải có một số lượng lớn packet dẫn đến trùng IV thì mới có thể crack được (trong điều kiện thử nghiệm thì cần khoảng trên 80.000 packet để chắc rằng bẻ khóa thành công)
-## **I. KỊCH BẢN 1 - SỬ DỤNG MÁY LINUX**
+## **II. KỊCH BẢN 2 - SỬ DỤNG MÁY LINUX**
 **Bước 1:** Sử dụng airodump-ng/kismet để dò thông tin về các mạng xung quanh và tìm kiếm các thông tin của AP cần tấn công, export traffic với định dạng pcap.
 
 **Bước 2:** Tăng tốc quá trình bắt gói tin với công cụ aireplay bằng cách giả mạo authen và arp request như phần ở trên.
