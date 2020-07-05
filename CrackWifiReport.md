@@ -16,6 +16,8 @@ WEP là giao thức mã hóa duy nhất có sẵn cho các thiết bị 802.11a 
 ## **II. ENCRYPTION DETAILS**
 Mỗi gói tin gửi đi sẽ được mã hóa bằng một key stream riêng biệt.
 
+![1280px-Wep-crypt-alt.svg.png](https://www.upsieutoc.com/images/2020/07/05/1280px-Wep-crypt-alt.svg.png)
+
 Key stream này được tạo ra bằng cách kết hợp một IV (Initialization vector) 24 bit với password (dùng để đăng nhập vào wifi) 40 bit.
 
 Khi gói tin được mã hóa xong thì trước khi gửi đi, gói tin ấy sẽ được đính kèm IV ở dạng plaintext vào và cuối cùng là gửi đi đến AP.
