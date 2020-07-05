@@ -53,17 +53,15 @@ Hard Disk 128 GB SSD
 ## **II. ACCESS POINT**
 Sử dụng AP có hỗ trợ thiết lập sử dụng phương thức bảo mật WEP ở cả 2 mode: OPEN và Shared Key.
 ## **III. CÁC CÔNG CỤ ĐƯỢC SỬ DỤNG**
-### **1. Aireplay-ng** - Công cụ bẻ khóa mã hóa WEP dựa trên Perl phổ biến nhất
-### **2. Aircrack-ng** - ARP giả mạo / tiêm bằng cách sử dụng aireplay-ng
-### **3. Kismet** - Network Sniffer, cũng có thể lấy IV
-### **4. Airodump** - GrabbingIVs
-### **5. Commview** - Bắt các gói trong Windows
-### **6. Aircrack-ng GUI** - Cung cấp giao diện người dùng trên Windows
-
 Phân loại theo hệ điều hành sử dụng:
-Kali Linux: Aireplay-ng, Aircrack-ng, Airodump, Kismet.
-Window 10: Commview, Aircrack-ng GUI.
-
+### **1. Kali Linux OS**
+**Aireplay-ng** - Công cụ bẻ khóa mã hóa WEP dựa trên Perl phổ biến nhất
+**Aircrack-ng** - ARP giả mạo / tiêm bằng cách sử dụng aireplay-ng
+**Kismet** - Network Sniffer, cũng có thể lấy IV
+**Airodump** - GrabbingIVs
+### **2. Windows OS**
+**Commview** - Bắt các gói trong Windows
+**Aircrack-ng GUI** - Cung cấp giao diện người dùng trên Windows
 # **C. TRIỂN KHAI TẤN CÔNG**
 ## **I. COMMVIEW**
 ### **1. General about Commview**
