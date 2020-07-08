@@ -8,73 +8,74 @@
 | Đặng Hồng Quang | 17520944 |
 | Nguyễn Xuân Hà | 18520042 |
 
-[A. CƠ SỞ LÝ THUYẾT](#a-cơ-sở-lý-thuyết)
+[**A. CƠ SỞ LÝ THUYẾT**](#a-cơ-sở-lý-thuyết)
 
-[I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](#i-overview-about-wired-equivalent-privacy---wep)
+[ I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](#i-overview-about-wired-equivalent-privacy---wep)
 
-[II. ENCRYPTION DETAILS](#ii-encryption-details)
+[ II. ENCRYPTION DETAILS](#ii-encryption-details)
 
-[III. AUTHENTICATION](#iii-authentication)
+[ III. AUTHENTICATION](#iii-authentication)
 
-[IV. THE WEAKNESS OF WEP](#iv-the-weakness-of-wep)
+[ IV. THE WEAKNESS OF WEP](#iv-the-weakness-of-wep)
 
-[B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG](#b-môi-trường-thực-hành-và-yêu-cầu-hệ-thống)
+[**B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG**](#b-môi-trường-thực-hành-và-yêu-cầu-hệ-thống)
 
-[I. HỆ ĐIỀU HÀNH](#i-hệ-điều-hành)
+[ I. HỆ ĐIỀU HÀNH](#i-hệ-điều-hành)
 
-[1. Kali linux](#1-kali-linux)
+[   1. Kali linux](#1-kali-linux)
 
-[2. Windows](#2-windows)
+[   2. Windows](#2-windows)
 
-[II. ACCESS POINT](#ii-access-point)
+[ II. ACCESS POINT](#ii-access-point)
 
-[III. CÁC CÔNG CỤ ĐƯỢC SỬ DỤNG](#iii-các-công-cụ-được-sử-dụng)
+[ III. CÁC CÔNG CỤ ĐƯỢC SỬ DỤNG](#iii-các-công-cụ-được-sử-dụng)
 
-[C. XÂY DỰNG KỊCH BẢN](#c-xây-dựng-kịch-bản)
+[**C. XÂY DỰNG KỊCH BẢN**](#c-xây-dựng-kịch-bản)
 
-[I. KỊCH BẢN 1 - SỬ DỤNG MÁY WINDOWS](#i-kịch-bản-1---sử-dụng-máy-windows)
+[ I. KỊCH BẢN 1 - SỬ DỤNG MÁY WINDOWS](#i-kịch-bản-1---sử-dụng-máy-windows)
 
-[II. KỊCH BẢN 2 - SỬ DỤNG MÁY LINUX](#ii-kịch-bản-2---sử-dụng-máy-linux)
+[ II. KỊCH BẢN 2 - SỬ DỤNG MÁY LINUX](#ii-kịch-bản-2---sử-dụng-máy-linux)
 
-[D. TRIỂN KHAI TẤN CÔNG](#d-triển-khai-tấn-công)
+[**D. TRIỂN KHAI TẤN CÔNG**](#d-triển-khai-tấn-công)
 
-[I. COMMVIEW](#i-commview)
+[ I. COMMVIEW](#i-commview)
 
-[II. KISMET](#ii-kismet)
+[ II. KISMET](#ii-kismet)
 
-[III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK](#iii-cracking-wpawpa2-psk-with-a-dictionary-attack)
+[ III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK](#iii-cracking-wpawpa2-psk-with-a-dictionary-attack)
 
-[1. Introduction](#1-introduction)
+[   1. Introduction](#1-introduction)
 
-[2. Assumptions](#2-assumptions)
+[   2. Assumptions](#2-assumptions)
 
-[3. Solution](#3-solution)
+[   3. Solution](#3-solution)
 
-[4. Used software](#4-used-software)
+[   4. Used software](#4-used-software)
 
-[5. Requirement](#5-requirement)
+[   5. Requirement](#5-requirement)
 
-[6. Details of steps](#6-details-of-steps)
+[   6. Details of steps](#6-details-of-steps)
 
-[7. Reference](#7-reference)
+[   7. Reference](#7-reference)
 
-[IV. CRACKING WEP](#iv-cracking-wep)
+[ IV. CRACKING WEP](#iv-cracking-wep)
 
-[1. Cấu hình phần cứng/mềm](#1-cấu-hình-phần-cứngmềm)
+[   1. Cấu hình phần cứng/mềm](#1-cấu-hình-phần-cứngmềm)
 
-[2. Tool sử dụng](#2-tool-sử-dụng)
+[   2. Tool sử dụng](#2-tool-sử-dụng)
 
-[3. Quy trình tấn công](#3-quy-trình-tấn-công)
+[   3. Quy trình tấn công](#3-quy-trình-tấn-công)
 
-[4. Thiết lập môi trường tấn công](#4-thiết-lập-môi-trường-tấn-công)
+[   4. Thiết lập môi trường tấn công](#4-thiết-lập-môi-trường-tấn-công)
 
-[5. Scan mạng và bắt gói tin: Airodump-ng](#5-scan-mạng-và-bắt-gói-tin-airodump-ng)
+[   5. Scan mạng và bắt gói tin: Airodump-ng](#5-scan-mạng-và-bắt-gói-tin-airodump-ng)
 
-[6. Fake gói tin, tăng tốc độ thu nhập data: Aireplay-ng](#6-fake-gói-tin-tăng-tốc-độ-thu-nhập-data-aireplay-ng)
+[   6. Fake gói tin, tăng tốc độ thu nhập data: Aireplay-ng](#6-fake-gói-tin-tăng-tốc-độ-thu-nhập-data-aireplay-ng)
 
-[7. Crack WEP: Aircrack-ng](#7-crack-wep-aircrack-ng)
+[   7. Crack WEP: Aircrack-ng](#7-crack-wep-aircrack-ng)
 
-[8. Đối với các mạng mã hóa WEP - ShareKey](#8-đối-với-các-mạng-mã-hóa-wep---sharekey)
+[   8. Đối với các mạng mã hóa WEP - ShareKey](#8-đối-với-các-mạng-mã-hóa-wep---sharekey)
+
 # A. CƠ SỞ LÝ THUYẾT
 ## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
 Wired Equivalent Privacy (WEP) là một thuật toán bảo mật cho các mạng không dây IEEE 802.11. Được giới thiệu như một phần của tiêu chuẩn 802.11 ban đầu được phê chuẩn vào năm 1997, mục đích của nó là cung cấp bảo mật dữ liệu tương đương với mạng có dây truyền thống. WEP, có thể recognizable bằng khóa 10 hoặc 26 chữ số thập lục phân (40 hoặc 104 bit).
@@ -290,7 +291,7 @@ Use aireplay-ng to deauthenticate the wireless client
 * A wireless adapter capable of injection/monitor mode. Some computers have network cards capable of this from the factory. If it isn't available you'll have to buy an external one.
 * A wordlist to attempt to "crack" the password once it has been captured.
 
-### **6. Details of steps:**
+### **6. Details of steps**
 #### **Step 1 - Start the wireless interface in monitor mode**
 ```
 airmon-ng
@@ -314,7 +315,7 @@ aircrack-ng -w password.lst -b <MAC_AP> psk*.cap
 ### **7. Reference**
 Demo is available on Youtube:
 
-[![](https://www.upsieutoc.com/images/2020/06/14/image11e433a1ce5fac76.png)](https://youtu.be/lyvsETiD1WM)
+[![](https://www.upsieutoc.com/images/2020/07/08/Untitledf07b94bf6d4045f7.png)](https://youtu.be/lyvsETiD1WM)
 ## **IV. CRACKING WEP**
 
 Trong báo cáo này, nhóm chúng em sẽ thực hiện demo một cuộc tấn công crack pass wifi được mã hóa WEP. Báo cáo sẽ trình bày quy trình tấn công cũng như chức năng các tool được sử dụng trong từng bước của quy trình tấn công.
