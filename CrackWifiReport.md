@@ -8,7 +8,7 @@
 | Đặng Hồng Quang | 17520944 |
 | Nguyễn Xuân Hà | 18520042 |
 
-## **MỤC LỤC**
+# **MỤC LỤC**
 [**A. CƠ SỞ LÝ THUYẾT**](#a-cơ-sở-lý-thuyết)
 
 [ I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](#i-overview-about-wired-equivalent-privacy---wep)
@@ -76,6 +76,8 @@
 [   7. Crack WEP: Aircrack-ng](#7-crack-wep-aircrack-ng)
 
 [   8. Đối với các mạng mã hóa WEP - ShareKey](#8-đối-với-các-mạng-mã-hóa-wep---sharekey)
+
+---
 
 # A. CƠ SỞ LÝ THUYẾT
 ## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
