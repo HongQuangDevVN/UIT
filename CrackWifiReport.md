@@ -2,7 +2,7 @@
 
 # **[REPORT] WIRELESS NETWORK N MOBILE SECURITY - NT330.K21.ANTN**
 
-**Lecturer: PhD. Lê Kim Hùng**
+### **Lecturer: PhD. Lê Kim Hùng**
 | Họ và tên | MSSV |
 | --- | --- |
 | Đặng Hồng Quang | 17520944 |
