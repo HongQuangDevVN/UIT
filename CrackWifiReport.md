@@ -8,7 +8,9 @@
 | Đặng Hồng Quang | 17520944 |
 | Nguyễn Xuân Hà | 18520042 |
 
-[A. CƠ SỞ LÝ THUYẾT](#a-co-so-ly-thuyet)
+[A. CƠ SỞ LÝ THUYẾT](#a-cơ-sở-lý-thuyết)
+[I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](user-content-i-overview-about-wired-equivalent-privacy---wep)
+[II. ENCRYPTION DETAILS](user-content-ii-encryption-details)
 [B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG](#b-moi-truong-thuc-hanh-va-yeu-cau-he-thong)
 
 # A. CƠ SỞ LÝ THUYẾT
