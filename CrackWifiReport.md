@@ -152,7 +152,12 @@ Trang này cho phép bạn tạo ra các rule để bắt các gói tin. Ví d�
 ### **3. Thanh công cụ / hỗ trợ**
 Ngoài các tính năng kể trên, CommView còn hỗ trợ các tùy chọn khác như IP Alisases, MAC alisases, Package Generator, Reconstruct TCP session
 ![9.png](https://www.upsieutoc.com/images/2020/06/14/9.png)
+### **4. Thực hiện bẻ khóa WEP**
+
+![106695091_3117515238316396_6719727130396227728_n.png](https://www.upsieutoc.com/images/2020/07/08/106695091_3117515238316396_6719727130396227728_n.png)
+
 ## **II. KISMET**
+### **1. Chuẩn bị môi trường**
 Flow: Open Terminal ⇒ airmon-ng start wlan0
 
 Kismet can detect any nearby devices that use Wi-Fi, whether they are connected or not. This ability lets us scan the nearby area for both APs and client devices, even watch small details about when a device or connection is in use.
@@ -176,7 +181,9 @@ Statistics about Wi-Fi:
 Packet Graphs:
 
 ![14.png](https://www.upsieutoc.com/images/2020/06/14/14.png)
+### **2. Thực hiện bẻ khóa WEP**
 
+![106732283_917575348719873_8115416413368786823_n.png](https://www.upsieutoc.com/images/2020/07/08/106732283_917575348719873_8115416413368786823_n.png)
 ## **III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK**
 ### **1. Introduction**
 WPA/WPA2 supports many types of authentication beyond pre-shared keys. aircrack-ng can ONLY crack pre-shared keys. So make sure airodump-ng shows the network as having the authentication type of PSK, otherwise, don't bother trying to crack it.
