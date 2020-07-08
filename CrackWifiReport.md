@@ -9,6 +9,7 @@
 | Nguyễn Xuân Hà | 18520042 |
 
 [A. CƠ SỞ LÝ THUYẾT](#a-co-so-ly-thuyet)
+[B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG](#b-moi-truong-thuc-hanh-va-yeu-cau-he-thong)
 
 # A. CƠ SỞ LÝ THUYẾT
 ## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
