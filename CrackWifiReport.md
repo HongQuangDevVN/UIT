@@ -10,9 +10,9 @@
 
 [A. CƠ SỞ LÝ THUYẾT](#a-cơ-sở-lý-thuyết)
 
-[I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](i-overview-about-wired-equivalent-privacy---wep)
+[I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](#i-overview-about-wired-equivalent-privacy---wep)
 
-[II. ENCRYPTION DETAILS](ii-encryption-details)
+[II. ENCRYPTION DETAILS](#ii-encryption-details)
 
 [B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG](#b-moi-truong-thuc-hanh-va-yeu-cau-he-thong)
 
