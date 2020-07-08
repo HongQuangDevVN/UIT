@@ -1,3 +1,5 @@
+![logo uit](https://raw.githubusercontent.com/Huy3nMy/Cracking_WEP/master/image/uit-logo.png)
+
 # **[REPORT] WIRELESS NETWORK N MOBILE SECURITY - NT330.K21.ANTN**
 
 **Lecturer: PhD. Lê Kim Hùng**
@@ -5,6 +7,8 @@
 | --- | --- |
 | Đặng Hồng Quang | 17520944 |
 | Nguyễn Xuân Hà | 18520042 |
+
+[A. CƠ SỞ LÝ THUYẾT](a.Co-so-ly-thuyet)
 
 # A. CƠ SỞ LÝ THUYẾT
 ## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
