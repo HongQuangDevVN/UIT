@@ -14,8 +14,67 @@
 
 [II. ENCRYPTION DETAILS](#ii-encryption-details)
 
-[B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG](#b-moi-truong-thuc-hanh-va-yeu-cau-he-thong)
+[III. AUTHENTICATION](#iii-authentication)
 
+[IV. THE WEAKNESS OF WEP](#iv-the-weakness-of-wep)
+
+[B. MÔI TRƯỜNG THỰC HÀNH VÀ YÊU CẦU HỆ THỐNG](#b-môi-trường-thực-hành-và-yêu-cầu-hệ-thống)
+
+[I. HỆ ĐIỀU HÀNH](#i-hệ-điều-hành)
+
+[1. Kali linux](#1-kali-linux)
+
+[2. Windows](#2-windows)
+
+[II. ACCESS POINT](#ii-access-point)
+
+[III. CÁC CÔNG CỤ ĐƯỢC SỬ DỤNG](#iii-các-công-cụ-được-sử-dụng)
+
+[C. XÂY DỰNG KỊCH BẢN](#c-xây-dựng-kịch-bản)
+
+[I. KỊCH BẢN 1 - SỬ DỤNG MÁY WINDOWS](#i-kịch-bản-1---sử-dụng-máy-windows)
+
+[II. KỊCH BẢN 2 - SỬ DỤNG MÁY LINUX](#ii-kịch-bản-2---sử-dụng-máy-linux)
+
+[D. TRIỂN KHAI TẤN CÔNG](#d-triển-khai-tấn-công)
+
+[I. COMMVIEW](#i-commview)
+
+[II. KISMET](#ii-kismet)
+
+[III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK](#iii-cracking-wpawpa2-psk-with-a-dictionary-attack)
+
+[1. Introduction](#1-introduction)
+
+[2. Assumptions](#2-assumptions)
+
+[3. Solution](#3-solution)
+
+[4. Used software](#4-used-software)
+
+[5. Requirement](#5-requirement)
+
+[6. Details of steps](#6-details-of-steps)
+
+[7. Reference](#7-reference)
+
+[IV. CRACKING WEP](#iv-cracking-wep)
+
+[1. Cấu hình phần cứng/mềm](#1-cấu-hình-phần-cứngmềm)
+
+[2. Tool sử dụng](#2-tool-sử-dụng)
+
+[3. Quy trình tấn công](#3-quy-trình-tấn-công)
+
+[4. Thiết lập môi trường tấn công](#4-thiết-lập-môi-trường-tấn-công)
+
+[5. Scan mạng và bắt gói tin: Airodump-ng](#5-scan-mạng-và-bắt-gói-tin-airodump-ng)
+
+[6. Fake gói tin, tăng tốc độ thu nhập data: Aireplay-ng](#6-fake-gói-tin-tăng-tốc-độ-thu-nhập-data-aireplay-ng)
+
+[7. Crack WEP: Aircrack-ng](#7-crack-wep-aircrack-ng)
+
+[8. Đối với các mạng mã hóa WEP - ShareKey](#8-đối-với-các-mạng-mã-hóa-wep---sharekey)
 # A. CƠ SỞ LÝ THUYẾT
 ## **I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP**
 Wired Equivalent Privacy (WEP) là một thuật toán bảo mật cho các mạng không dây IEEE 802.11. Được giới thiệu như một phần của tiêu chuẩn 802.11 ban đầu được phê chuẩn vào năm 1997, mục đích của nó là cung cấp bảo mật dữ liệu tương đương với mạng có dây truyền thống. WEP, có thể recognizable bằng khóa 10 hoặc 26 chữ số thập lục phân (40 hoặc 104 bit).
