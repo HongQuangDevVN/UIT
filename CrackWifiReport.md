@@ -8,6 +8,7 @@
 | Đặng Hồng Quang | 17520944 |
 | Nguyễn Xuân Hà | 18520042 |
 
+## **MỤC LỤC**
 [**A. CƠ SỞ LÝ THUYẾT**](#a-cơ-sở-lý-thuyết)
 
 [ I. OVERVIEW ABOUT WIRED EQUIVALENT PRIVACY - WEP](#i-overview-about-wired-equivalent-privacy---wep)
@@ -38,11 +39,11 @@
 
 [**D. TRIỂN KHAI TẤN CÔNG**](#d-triển-khai-tấn-công)
 
-[ I. COMMVIEW](#i-commview)
+[**I. COMMVIEW**](#i-commview)
 
-[ II. KISMET](#ii-kismet)
+[**II. KISMET**](#ii-kismet)
 
-[ III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK](#iii-cracking-wpawpa2-psk-with-a-dictionary-attack)
+[**III. CRACKING WPA/WPA2-PSK WITH A DICTIONARY ATTACK**](#iii-cracking-wpawpa2-psk-with-a-dictionary-attack)
 
 [   1. Introduction](#1-introduction)
 
@@ -58,7 +59,7 @@
 
 [   7. Reference](#7-reference)
 
-[ IV. CRACKING WEP](#iv-cracking-wep)
+[**IV. CRACKING WEP**](#iv-cracking-wep)
 
 [   1. Cấu hình phần cứng/mềm](#1-cấu-hình-phần-cứngmềm)
 
