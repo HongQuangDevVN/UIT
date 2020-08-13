@@ -449,4 +449,5 @@ aireplay-ng -1 0 -e  < target's essid >  -y keystream-01-E8-94-F6-3C-2D-D8.xor -
 
 [![FakeSKA.png](https://www.upsieutoc.com/images/2020/06/17/FakeSKA.png)](https://www.upsieutoc.com/image/frF6QO)
 
+
 ---
